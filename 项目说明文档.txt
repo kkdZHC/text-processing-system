@@ -1,0 +1,39 @@
+后端环境配置：
+
+// 下载paddle gpu版本
+
+// 下载文本纠错所需依赖库
+pip install --upgrade paddlenlp
+pip install pypinyin --upgrade
+
+// 下载word处理依赖库
+pip install python-docx
+
+// 下载其他依赖包
+pip install python-multipart
+
+// 安装后端框架FastAPI
+pip install fastapi
+pip install "uvicorn[standard]"
+
+// demo测试：通过cd命令进入项目目录，测试文本纠错demo
+// 文本纠错
+python demo1.py
+// word文档纠错
+python demo2.py
+
+// 通过cd命令进行项目backend文件夹，启动后端服务！
+python main.py
+// 看到“Application startup complete”和“Uvicorn ruuning on http:127.0.0.1:8000”代表后端API项目启动成功
+
+前端环境配置：
+
+// 通过cd命令进行项目frontend文件夹，安装项目依赖
+npm install
+
+// 启动前端项目
+npm run dev
+// 看到App running at:Local: http://localhost:9528代表项目启动成功
+此时访问http://localhost:9528即可进入纠错系统
+
+// 注意要完整访问的话，前端和后端项目都要启动
